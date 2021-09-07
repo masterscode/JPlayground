@@ -3,6 +3,12 @@ package com.play.jSE;
 public class Main {
 
     public static void main(String[] args) {
-        LearnException.print("the key", "the value - 566");
+        System.out.println(
+                Thread.activeCount()
+        );
+
+        System.out.println(
+                Runtime.getRuntime().availableProcessors()
+        );
     }
 }

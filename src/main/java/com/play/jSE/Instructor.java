@@ -1,7 +1,9 @@
 package com.play.jSE;
 
-public class Instructor extends User{
+import java.util.ArrayList;
 
+public class Instructor extends User{
+ private final ArrayList<String> underTest = new ArrayList<String>();
     public Instructor(int points){
         super(points);
     }
