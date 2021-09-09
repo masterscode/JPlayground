@@ -1,7 +1,7 @@
 package com.play.repository;
 
-import com.play.models.UserEntity;
+import com.play.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends JpaRepository<UserEntity, Long> {
+public interface UserRepository extends JpaRepository<User, Long> {
 }
