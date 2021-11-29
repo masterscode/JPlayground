@@ -1,6 +1,6 @@
 package com.play.controllers;
 
-import com.play.controllers.payloads.Req;
+import com.play.payloads.requests.Req;
 import com.play.models.User;
 import com.play.repository.UserRepository;
 import lombok.RequiredArgsConstructor;

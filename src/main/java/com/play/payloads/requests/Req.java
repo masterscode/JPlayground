@@ -1,4 +1,4 @@
-package com.play.controllers.payloads;
+package com.play.payloads.requests;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
