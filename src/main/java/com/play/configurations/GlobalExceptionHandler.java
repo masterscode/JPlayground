@@ -1,5 +1,6 @@
 package com.play.configurations;
 
+import com.play.exceptions.GenericException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
@@ -27,6 +28,15 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         return ResponseEntity
                 .internalServerError()
                 .body("An unknown error has occurred, if this persist contact the admin");
+    }
+
+    @ExceptionHandler(GenericException.class)
+    public ResponseEntity<String> handleGenericException(GenericException ex){
+        logger.error("*** the error is ", ex.getStackTrace());
+
+        return ResponseEntity
+                .internalServerError()
+                .body(ex.getMessage());
     }
 
     @Override

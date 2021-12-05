@@ -30,7 +30,7 @@ public class EmailMessageQueueServiceImpl implements EmailMessageQueueService {
 
     }
 
-    @Scheduled(fixedDelay = 5000)
+//    @Scheduled(fixedDelay = 5000)
     private void sendMessages(){
         logger.info("starting attempts to send messages on the queue");
         var queueList = emailMessageQueueRepository.findAllBySent(false);
