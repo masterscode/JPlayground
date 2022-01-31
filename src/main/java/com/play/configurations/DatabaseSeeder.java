@@ -18,11 +18,11 @@ public class DatabaseSeeder {
         log.info("saving users to the database");
 
         List<UserRegistrationRequest> requests = List.of(
-                new UserRegistrationRequest("test full name","my address", "dummy1@email.com"),
-                new UserRegistrationRequest("test full name","my address", "dummy2@email.com"),
-                new UserRegistrationRequest("test full name","my address", "dummy3@email.com"),
-                new UserRegistrationRequest("test full name","my address", "dummy4@email.com"),
-                new UserRegistrationRequest("test full name","my address", "dummy5@email.com"),
+//                new UserRegistrationRequest("test full name","my address", "dummy1@email.com"),
+//                new UserRegistrationRequest("test full name","my address", "dummy2@email.com"),
+//                new UserRegistrationRequest("test full name","my address", "dummy3@email.com"),
+//                new UserRegistrationRequest("test full name","my address", "dummy4@email.com"),
+//                new UserRegistrationRequest("test full name","my address", "dummy5@email.com"),
                 new UserRegistrationRequest("test full name","my address", "dummy6@email.com")
         );
 
