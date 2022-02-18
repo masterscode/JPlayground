@@ -12,6 +12,7 @@ import java.io.Serializable;
 @Data
 @Builder
 public class UserRegistrationRequest implements Serializable {
+    private Long id;
     private String fullName;
     private String address;
     private String email;

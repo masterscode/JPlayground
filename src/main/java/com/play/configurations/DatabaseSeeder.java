@@ -23,7 +23,7 @@ public class DatabaseSeeder {
 //                new UserRegistrationRequest("test full name","my address", "dummy3@email.com"),
 //                new UserRegistrationRequest("test full name","my address", "dummy4@email.com"),
 //                new UserRegistrationRequest("test full name","my address", "dummy5@email.com"),
-                new UserRegistrationRequest("test full name","my address", "dummy6@email.com")
+                new UserRegistrationRequest(1L, "test full name","my address", "dummy6@email.com")
         );
 
         var result = requests.stream().map(request -> userService.saveUser(request)).toList();
