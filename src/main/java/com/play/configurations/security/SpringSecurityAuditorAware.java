@@ -1,4 +1,4 @@
-package com.play.configurations;
+package com.play.configurations.security;
 
 import com.play.models.User;
 import org.springframework.data.domain.AuditorAware;

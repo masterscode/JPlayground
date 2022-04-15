@@ -9,11 +9,11 @@ import org.springframework.context.event.EventListener;
 @Configuration
 @RequiredArgsConstructor(onConstructor = @__(@Lazy))
 public class BaseConfiguration {
-private final DatabaseSeeder databaseSeeder;
+    private final DatabaseSeeder databaseSeeder;
 
     @EventListener
-    public void seedDataBase(ContextRefreshedEvent event){
-//        databaseSeeder.saveUsers();
+    public void seedDataBase(ContextRefreshedEvent event) {
+        databaseSeeder.saveUsers();
     }
 
 }

@@ -1,4 +1,4 @@
-package com.play.configurations;
+package com.play.configurations.security;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;

@@ -23,7 +23,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<String> handleException(Exception ex){
-        logger.error("*** the error is ", ex.getStackTrace());
+        logger.error("*** the error is ", ex);
 
         return ResponseEntity
                 .internalServerError()
@@ -32,7 +32,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(GenericException.class)
     public ResponseEntity<String> handleGenericException(GenericException ex){
-        logger.error("*** the error is ", ex.getStackTrace());
+        logger.error("*** the error is ", ex);
 
         return ResponseEntity
                 .internalServerError()
