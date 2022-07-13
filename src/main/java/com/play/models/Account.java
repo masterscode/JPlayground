@@ -1,8 +1,23 @@
 package com.play.models;
 
-import javax.persistence.Embeddable;
+import lombok.*;
 
-@Embeddable
-public class Account {
-    private String name, number, bank;
+import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
+
+@ToString
+@Entity
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class Account extends BaseEntity {
+    private String name;
+    private String number;
+    private String bank;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    private User user;
 }

@@ -6,7 +6,7 @@ import java.util.List;
 
 public class RotatePlay {
     public static void main(String[] args) {
-        String months[] = { "January", "February", "March", "April", "May", "June", "July", "August", "September",
+        String[] months = { "January", "February", "March", "April", "May", "June", "July", "August", "September",
                 "October", "November", "December" };
 
         List<String> mons = Arrays.asList(months);

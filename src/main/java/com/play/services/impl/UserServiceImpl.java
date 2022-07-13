@@ -12,15 +12,13 @@ import com.play.services.interfaces.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.Async;
-import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.stream.IntStream;
 
 @RequiredArgsConstructor
 @Service
@@ -73,5 +71,11 @@ public class UserServiceImpl implements UserService {
     @Async
     public void sendMessages(RegistrationCompleteEventData eventData){
         System.out.println("=== sending message to recipient " + eventData.getUser().getFullName());
+    }
+
+    @Async()
+    @Override
+    public void logNumbersAsync(){
+        IntStream.rangeClosed(1, 10000000).boxed().forEach(System.err::println);
     }
 }

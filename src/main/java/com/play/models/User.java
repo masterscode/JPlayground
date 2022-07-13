@@ -1,8 +1,13 @@
 package com.play.models;
 
 import lombok.*;
+import org.hibernate.annotations.CascadeType;
 
-import javax.persistence.*;
+
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -10,12 +15,13 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@ToString
 public class User extends BaseEntity{
     private String fullName;
     private String address;
     private String email;
 
-//    @Embedded
-//    private Account account;
 
+    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER, orphanRemoval = true)
+    private Set<Account> accounts;
 }

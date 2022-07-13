@@ -13,7 +13,7 @@ public class BaseConfiguration {
 
     @EventListener
     public void seedDataBase(ContextRefreshedEvent event) {
-        databaseSeeder.saveUsers();
+//        databaseSeeder.saveUsers();
     }
 
 }
