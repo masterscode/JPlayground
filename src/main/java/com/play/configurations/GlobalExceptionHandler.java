@@ -23,11 +23,11 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<String> handleException(Exception ex){
-        logger.error("*** the error is ", ex);
+//        logger.error("*** the error is ", ex);
 
         return ResponseEntity
                 .internalServerError()
-                .body("An unknown error has occurred, if this persist contact the admin");
+                .body(ex.getCause().getMessage());
     }
 
     @ExceptionHandler(GenericException.class)

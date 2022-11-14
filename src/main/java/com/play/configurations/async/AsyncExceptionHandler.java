@@ -1,5 +1,6 @@
 package com.play.configurations.async;
 
+import com.play.exceptions.GenericException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.aop.interceptor.AsyncUncaughtExceptionHandler;
 
@@ -17,5 +18,6 @@ public class AsyncExceptionHandler implements AsyncUncaughtExceptionHandler {
         log.error("Accompanying objects", objects);
 
         log.info("== End of async method exception ==");
+ throw new GenericException(throwable.getCause().getMessage());
     }
 }
